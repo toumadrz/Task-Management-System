@@ -31,7 +31,7 @@ enterBtn.addEventListener("click", async function(){
     
     
     
-
+    //เอาแต่ statusFilter ที่เลือก
     if (statusFilter !== "all") {
         console.log(statusFilter);
         filterData = filterData.filter(task => task.Status.toLowerCase() === statusFilter.toLowerCase());

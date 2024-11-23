@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 module.exports = async (req, res) => {
     try {
-        const taskId = req.params.id;  // ดึง taskId จาก URL
+        const taskId = req.params.id;  // /updatetask/id
         const { taskName, detail, dueDate, priority, status } = req.body;  
 
         if (!mongoose.Types.ObjectId.isValid(taskId)) {
@@ -27,7 +27,7 @@ module.exports = async (req, res) => {
             return res.status(400).json({ error: 'Invalid input: All fields are required' });
         }
 
-        res.status(200).json(updatedTask);  // ส่งข้อมูล task ที่อัปเดตแล้วกลับ
+        res.status(200).json(updatedTask);  
     } catch (error) {
         console.error(error);
         res.status(500).json({ error: 'Failed to update task' });

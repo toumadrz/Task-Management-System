@@ -10,7 +10,7 @@ module.exports = async (req, res) => {
         }
 
         // บันทึกข้อมูล
-        await User.create({ //สร้าง task data
+        await User.create({
             TaskName: task,
             Detail: detail,
             Duedate: dueDateTimestamp,

@@ -6,7 +6,7 @@ document.getElementById('confirmDeleteButton').addEventListener('click', functio
     deleteTask(taskId); 
 });
 
-//กดปุ่มอัพเดต saveButton
+
 document.getElementById("saveButton").addEventListener("click", saveTask);
 
 taskTableBody.addEventListener("click", (event) => {
